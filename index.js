@@ -7,8 +7,8 @@ const crypto = require('crypto');
 const mkdirp = require('mkdirp');
 
 const SETTING = {
-    path: '.gulp/gulp-diff-build/',
-    hash: '.gulp/gulp-diff-build/hash.json'
+    path: '.diff',
+    hash: '.diff/hash.json'
 };
 
 module.exports = function (options) {
