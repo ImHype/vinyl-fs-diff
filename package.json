@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "run tasks only if src files are changed",
   "license": "MIT",
-  "repository": "moshisora/gulp-diff-build",
+  "repository": "ImHype/vinyl-fs-diff",
   "author": {
-    "name": "moshisora",
-    "url": "http://github.com/moshisora"
+    "name": "ImHype",
+    "url": "http://github.com/ImHype"
   },
   "engines": {
     "node": ">=4.0.0"
