@@ -7,7 +7,7 @@ const crypto = require('crypto');
 const mkdirp = require('mkdirp');
 
 const SETTING = {
-    path: '.diff',
+    path: '.diff/',
     hash: '.diff/hash.json'
 };
 

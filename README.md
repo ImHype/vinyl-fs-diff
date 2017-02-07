@@ -1,6 +1,5 @@
-![build status](https://circleci.com/gh/moshisora/gulp-diff-build.svg?style=shield&circle-token=8a39ce8a8622dc749863c218662f9befc01642fd)
 
-## gulp-diff-build
+## Vinyl-Fs-Diff
 
 gulp module to stream files only if target files are changed.
 
@@ -9,16 +8,16 @@ gulp module to stream files only if target files are changed.
 ### Install
 
 ```
-$ npm install gulp-diff-build --save-dev
+$ npm install vinyl-fs-diff --save-dev
 ```
 
 ### Usage
 
 This task will keep a hash reference of target files and run defined tasks only if files changed.
-File hashes will be saved in `.gulp/gulp-diff-build/hash.json`. You might like to add `.gulp` to your `.gitignore`.
+File hashes will be saved in `.diff/hash.json`. You might like to add `.gulp` to your `.gitignore`.
 
 ```javascript
-const diff = require('gulp-diff-build');
+const diff = require('vinyl-fs-diff');
 
 const SRC = 'src';
 const DEST = 'dist';
@@ -48,7 +47,7 @@ option to filter streaming files. This task will stream only files that match gi
 
 Type: `string` Defualt value: `'hash'`
 
-options to define filename of hash references for multi tasking or multi cache control. files of hash references will be saved as `.gulp/gulp-diff-build/[givenName].json`.
+options to define filename of hash references for multi tasking or multi cache control. files of hash references will be saved as `.diff/[givenName].json`.
 
 ## Example
 
@@ -57,7 +56,7 @@ example of building sass.
 gulp task watch all of sass src files and stream only `main.sass` and `main-sp.sass` into `sass()` task.
 
 ```javascript
-const diff = require('gulp-diff-build');
+const diff = require('vinyl-fs-diff');
 
 gulp.task('default', () => {
     gulp.src('src/sass/**/*.sass')
